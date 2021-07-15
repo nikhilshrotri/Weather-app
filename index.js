@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
-
+const port = process.env.PORT || 3000
 const app = express();
 
 const apiKey = "4ac1f94f27ae19457b468363ab27331b";
@@ -36,6 +36,6 @@ app.post('/', function(req, res){
     });
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("Weatherly App is listening on port 3000");
 });
